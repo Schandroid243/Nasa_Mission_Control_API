@@ -1,0 +1,16 @@
+{
+  "name": "nasa-project-api",
+  "version": "1.0.0",
+  "description": "NASA MISSIO CONTROL API",
+  "main": "src/server.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo",
+    "watch": "nodemon src/server.js",
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
