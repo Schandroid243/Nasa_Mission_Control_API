@@ -1,8 +1,16 @@
 const http = require("http");
 const app = require("../src/app");
 
+const { loadPlanetsData } = require("./models/planets.model");
+
 const server = http.createServer(app);
 const PORT = process.env.PORT || 8000;
-server.listen(PORT, () => {
-  console.log("listening on port " + PORT);
-});
+
+const startServer = async () => {
+  await loadPlanetsData();
+  server.listen(PORT, () => {
+    console.log("listening on port " + PORT);
+  });
+};
+
+startServer();
